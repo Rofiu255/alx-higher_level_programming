@@ -51,7 +51,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		node = set_pair(key, value);
 		node->next = NULL;
 		ht->array[i] = node;
-		if (strcmp(ht->array[index]->key, key) == 0)
+		if (strcmp(ht->array[i]->key, key) == 0)
 			printf("assigning key and value worked\n");
 		return (1);
 	}
@@ -73,8 +73,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (node == NULL)
 	{
 		node = set_pair(key, value);
-		node->next = ht->array[index];
-		ht->array[index] = node;
+		node->next = ht->array[i];
+		ht->array[i] = node;
 		return (1);
 	}
 	return (0);
