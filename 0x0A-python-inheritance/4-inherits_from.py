@@ -5,7 +5,6 @@ inherits_from function module.
 Define inherits_from function.
 """
 
-
 def inherits_from(obj, a_class):
     """Return whether obj inherits from a_class.
     obj: an object.
